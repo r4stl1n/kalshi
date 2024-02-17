@@ -1,4 +1,4 @@
-module github.com/ammario/kalshi
+module github.com/r4stl1n/kalshi
 
 go 1.19
 
