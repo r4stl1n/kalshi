@@ -7,7 +7,7 @@
 Package `kalshi` provides a Go implementation of [the Kalshi API](https://trading-api.readme.io/reference/getting-started).
 
 ```
-go get github.com/ammario/kalshi
+go get github.com/r4stl1n/kalshi
 ```
 
 Supports:
