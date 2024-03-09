@@ -84,8 +84,8 @@ type MarketsRequest struct {
 	CursorRequest
 	EventTicker  string `url:"event_ticker,omitempty"`
 	SeriesTicker string `url:"series_ticker,omitempty"`
-	MaxCloseTs   int    `url:"max_close_ts,omitempty"`
-	MinCloseTs   int    `url:"min_close_ts,omitempty"`
+	MaxCloseTs   int64   `url:"max_close_ts,omitempty"`
+	MinCloseTs   int64  `url:"min_close_ts,omitempty"`
 	// Status is one of "open", "closed", and "settled"
 	Status  string   `url:"status,omitempty"`
 	Tickers []string `url:"status,omitempty"`
