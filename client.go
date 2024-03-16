@@ -180,6 +180,12 @@ func (t Timestamp) Time() time.Time {
 	return time.Time(t)
 }
 
+func (t Timestamp) EncodeValues(key string, values *url.Values) error {
+	s := strconv.FormatInt(time.Time(t).UTC().Unix(), 10)
+	values.Set(key, s)
+	return nil
+}
+
 func (t *Timestamp) UnmarshalJSON(b []byte) error {
 	i, err := strconv.Atoi(string(b))
 	if err != nil {
