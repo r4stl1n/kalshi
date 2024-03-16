@@ -190,7 +190,10 @@ func (t *Timestamp) UnmarshalJSON(b []byte) error {
 }
 
 func (t Timestamp) MarshalJSON() ([]byte, error) {
-	return []byte(strconv.Itoa(int(time.Time(t).UTC().Unix()))), nil
+
+	s := strconv.FormatInt(time.Time(t).UTC().Unix(), 10)
+
+	return []byte(s), nil
 }
 
 func basicRateLimit() *rate.Limiter {
