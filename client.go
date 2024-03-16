@@ -190,9 +190,7 @@ func (t *Timestamp) UnmarshalJSON(b []byte) error {
 }
 
 func (t Timestamp) MarshalJSON() ([]byte, error) {
-
 	s := strconv.FormatInt(time.Time(t).UTC().Unix(), 10)
-
 	return []byte(s), nil
 }
 
