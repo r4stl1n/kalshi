@@ -84,7 +84,7 @@ type MarketsRequest struct {
 	CursorRequest
 	EventTicker  string `url:"event_ticker,omitempty"`
 	SeriesTicker string `url:"series_ticker,omitempty"`
-	MaxCloseTs   int64   `url:"max_close_ts,omitempty"`
+	MaxCloseTs   int64  `url:"max_close_ts,omitempty"`
 	MinCloseTs   int64  `url:"min_close_ts,omitempty"`
 	// Status is one of "open", "closed", and "settled"
 	Status  string   `url:"status,omitempty"`
@@ -269,8 +269,8 @@ type MarketHistoryResponse struct {
 // https://trading-api.readme.io/reference/getmarkethistory.
 type MarketHistoryRequest struct {
 	CursorRequest
-	MinTS Timestamp `json:"min_ts,omitempty"`
-	MaxTS Timestamp `json:"max_ts,omitempty"`
+	MinTS Timestamp `json:"min_ts,omitempty" url:"min_ts,omitempty"`
+	MaxTS Timestamp `json:"max_ts,omitempty" url:"max_ts,omitempty"`
 }
 
 func (c *Client) MarketHistory(

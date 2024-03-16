@@ -181,6 +181,7 @@ func (t Timestamp) Time() time.Time {
 }
 
 func (t Timestamp) EncodeValues(key string, values *url.Values) error {
+
 	s := strconv.FormatInt(time.Time(t).UTC().Unix(), 10)
 	values.Set(key, s)
 	return nil
